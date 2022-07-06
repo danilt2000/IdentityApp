@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using IdentityApp;
 using IdentityApp.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IdentityApp.Pages.Invoices
 {
+
+    [AllowAnonymous]
     public class IndexModel : PageModel
     {
         private readonly IdentityApp.Data.ApplicationDbContext _context;
